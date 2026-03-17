@@ -2,8 +2,8 @@ import { useState, type ReactNode } from 'react'
 import './App.css'
 
 interface FormFactory {
-  createFields: React.ReactNode;
-  createSubmitHandler: () => void;
+  createFields: () => React.ReactNode;
+  createSubmitHandler: () => (e: React.FormEvent) => void;
 }
 
 const EmailLoginFactory:FormFactory = {
